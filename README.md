@@ -1,7 +1,5 @@
 <html>
-
     <head>
-        <title>IONIX</title>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,11 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <!-- <link rel="stylesheet" type="text/css" href="1.css"> -->
         <link rel="stylesheet" href="../solarStyles.css">
-        
     </head>
-
     <body>
-        
         <div class="nav visionNav">
             <div><h1>Spaced Based Solar Power</h1></div>
         </div>
