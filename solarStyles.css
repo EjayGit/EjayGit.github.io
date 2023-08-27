@@ -22,7 +22,7 @@
 }
 
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/background-stars.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../background-stars.jpg");
     font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     color: whitesmoke;
@@ -38,7 +38,7 @@ body {
 .nav {
     position: sticky;
     top: 0px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/background-stars.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../background-stars.jpg");
     padding: 2rem 0 2rem 0;
     display: flex;
     flex-direction: row;
