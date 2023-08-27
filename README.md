@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="nav visionNav">
-            <div><h2>Spaced Based Solar Power</h2></div>
+            <div><p class="title">Spaced Based Solar Power</p></div>
         </div>
         <br>
         <div class="mainBody">
