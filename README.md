@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="form">
-                <form action="POST">
+                <form action="https://formkeep.com/f/0899661145dd" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
                     <div class="formEmailDiv"><input class="inputEmail" type="email" name="email" id="email" placeholder="Name"></div>
                     <div class="formNameDiv"><input class="inputName" type="text" name="formName" id="formName" placeholder="Email"></div>
                     <input type="submit" class="submitBtn">
