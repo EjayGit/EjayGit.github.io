@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <!-- <link rel="stylesheet" type="text/css" href="1.css"> -->
-        <link rel="stylesheet" href="styles/solarStyles.css">
+        <link rel="stylesheet" href="solarStyles.css">
         
     </head>
 
