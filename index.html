@@ -1,120 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>LLM</title>
-<style>
+<html>
 
-.wrapper {
-max-width: 75%;
-margin: auto;
-}
+    <head>
+        <title>Erik J Clark</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Bootstrap, Twitter and FontAwesome -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
 
-h1 { 
-margin: 3rem 0 1rem 0; 
-padding: 0;
-font-size: 1.5rem;
-}
-
-textarea {
-width: 100%;
-min-height: 200px;
-resize: none;
-border-radius: 8px;
-border: 1px solid #ddd;
-padding: 0.5rem;
-box-shadow: inset 0 0 0.25rem #ddd;
-&:focus {
-outline: none;
-border: 1px solid darken(#ddd, 5%);
-box-shadow: inset 0 0 0.5rem darken(#ddd, 5%);
-}
-}
-
-#the-count {
-float: right;
-padding: 0.1rem 0 0 0;
-font-size: 0.875rem;
-}
-/* Chat containers */
-.container {
-font-family: 'Arial', sans-serif;
-font-size: 16px;
-border: 2px solid #dedede;
-background-color: #f1f1f1;
-border-radius: 5px;
-padding: 15px;
-margin: 10px 0;
-}
+    <body>
+        <div class="home active">
+            <!-- <div class="background-center"> -->
+                <img class="profile-image" src="self.jpg" alt="A picture of me">
+                <!-- <div class="gfm-embed" data-url="https://www.gofundme.com/f/personal-support-and-court-action/widget/large"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script> -->
+                <div class="exp">
+                    <div>PILOT</div>
+                    <div>RESEARCHER</div>
+                    <div>VISIONARY</div>
+                    <div>DREAMER</div>
+                    <div>TECH-ENTHUSIAST</div>
+                </div>
+                <div class="pages">
+                    <a href="AGIDev.html">AGI DEVELOPMENT</a>
+                    <a href="vision.html">VISION</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="Erik Clark CV.pdf" target="_blank">CV</a>
+                </div>
+        </div>
 
 
-/* Clear floats */
-.container::after {
-content: "";
-clear: both;
-display: table;
-}
-
-/* Style images */
-.container img {
-float: left;
-max-width: 60px;
-width: 100%;
-margin-right: 20px;
-border-radius: 50%;
-}
-
-</style>
-</head>
-<body>
-<div class="wrapper">
-<h1>*Test Page* Prompt</h1>
-<textarea name="prompt" id="prompt" maxlength="1024" placeholder="Add prompt"autofocus></textarea>
-<label for="tokens_to_generate">Number tokens to generate (1-1024):</label>
-<input type="number" id="tokens_to_generate" name="tokens_to_generate" min="10" max="256", value=32>
-<button onclick="submit_query()">Submit</button>
-
-<div id="the-count">
-<span id="current">0</span>
-<span id="maximum">/ 1000</span>
-</div>
-<textarea name="response" id="response" maxlength="2048" placeholder="Response..."></textarea>
-</div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-	function submit_query() {
-		$("#response").val("Waiting for response...");
-		$.ajax({
-			url:"api",
-			type:"PUT",
-			data:JSON.stringify({prompts: [$("#prompt").val()], tokens_to_generate: parseInt($("#tokens_to_generate").val(),10)}),
-			contentType:"application/json; charset=utf-8",
-			dataType:"json",
-			success: function(data){
-				data.max_len=35;
-				$("#response").val(data.text);
-			}
-		});
-	}
-	
-$('textarea').keyup(function() {
-var characterCount = $(this).val().length,
-current = $('#current'),
-maximum = $('#maximum'),
-theCount = $('#the-count');
-
-current.text(characterCount);
-
-if (characterCount >= 800) {
-maximum.css('color', '#8f0001');
-current.css('color', '#8f0001');
-theCount.css('font-weight','bold');
-} else {
-maximum.css('color','#666');
-theCount.css('font-weight','normal');
-}
-});
-</script>
-</body>
+    <!-- Scripts -->
+    <!-- <script src="../media/bootstrap.js"></script> -->
+    <!-- <script src="../media/app.js"></script> -->
+    <!-- <script src="https://kit.fontawesome.com/dc57c5f4e4.js" crossorigin="anonymous"></script> -->
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/63912f81daff0e1306db73d0/1gjni351k';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
+    </body>
 </html>
