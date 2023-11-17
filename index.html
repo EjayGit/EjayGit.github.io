@@ -1,11 +1,8 @@
-<!-- coding=utf-8-->
-<!-- Copyright (c) 2022, NVIDIA CORPORATION.  All rights reserved.-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Megatron</title>
+<title>LLM</title>
 <style>
 
 .wrapper {
@@ -71,7 +68,7 @@ border-radius: 50%;
 </head>
 <body>
 <div class="wrapper">
-<h1>Prompt Megatron</h1>
+<h1>Prompt</h1>
 <textarea name="prompt" id="prompt" maxlength="1024" placeholder="Add prompt"autofocus></textarea>
 <label for="tokens_to_generate">Number tokens to generate (1-1024):</label>
 <input type="number" id="tokens_to_generate" name="tokens_to_generate" min="10" max="256", value=32>
@@ -81,13 +78,13 @@ border-radius: 50%;
 <span id="current">0</span>
 <span id="maximum">/ 1000</span>
 </div>
-<textarea name="response" id="response" maxlength="2048" placeholder="Megatron response..."></textarea>
+<textarea name="response" id="response" maxlength="2048" placeholder="Response..."></textarea>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 	function submit_query() {
-		$("#response").val("Waiting for Megatron response...");
+		$("#response").val("Waiting for response...");
 		$.ajax({
 			url:"api",
 			type:"PUT",
