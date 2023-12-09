@@ -1,68 +1,81 @@
-body {
-    background-color: #f2f2f2;
-    min-height: 100vh;
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header styles */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    padding: 20px 0;
+  text-align: center;
+  padding: 40px;
+  background-color: #005D9B;
+  color: #fff;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Main styles */
+main {
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
+img {
+  width: 100%;
+  margin: 20px 0;
 }
 
-.quantum-simulator {
-    max-width: 80%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-sizing: border-box;
+ul {
+  margin-bottom: 20px;
 }
 
-.potential-benefits,
-.future-of-quantum-climate-science,
-.stay-updated {
-    max-width: 50%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-sizing: border-box;
+ul li {
+  list-style-type: disc;
+  margin-left: 30px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Links styles */
 a {
-    color: #007bff;
-    text-decoration: none;
-    margin-bottom: 10px;
+  color: #005D9B;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  background-color: #005D9B;
+  color: #fff;
+  padding: 20px;
 }
