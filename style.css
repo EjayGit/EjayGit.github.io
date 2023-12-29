@@ -55,6 +55,10 @@
     border: 1px solid black;
   }
   
+  .self{
+    border: none;
+  }
+  
   ul {
     margin-bottom: 20px;
   }
