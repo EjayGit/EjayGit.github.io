@@ -24,6 +24,10 @@
     background-color: #005D9B;
     color: #fff;
   }
+
+  header p a{
+    color: white;
+  }
   
   h1 {
     font-size: 36px;
