@@ -66,6 +66,10 @@
   .blogpost{
     border-bottom: 1px solid #005D9B;
   }
+
+  .backgroundBlog{
+    border: none;
+  }
   
   ul {
     margin-bottom: 20px;
