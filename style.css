@@ -118,6 +118,11 @@ text-align: center;
     border: rgb(19, 15, 79) 4px;
     max-width: 20%;
     height: auto;
+    text-align: center;
+    margin: 2rem;
+}
+
+.priceText{
     text-align: justify;
 }
 
