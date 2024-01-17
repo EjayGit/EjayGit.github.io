@@ -1,120 +1,130 @@
 /* Reset styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-  
-  /* Global styles */
-  body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  }
-  
-  .container {
-  width: 90%;
-  margin: 0 auto;
-  }
-  
-  /* Header styles */
-  header {
-  text-align: center;
-  padding: 40px;
-  background-color: #005D9B;
-  color: #fff;
-  }
-  
-  header p a{
-  color: white;
-  }
-  
-  h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  }
-  
-  /* Main styles */
-  main {
-  padding: 2rem 4rem;
-  }
-  
-  section {
-  margin-bottom: 40px;
-  }
-  
-  h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  }
-  
-  p {
-  margin-bottom: 20px;
-  }
-  
-  img {
-  width: 20%;
-  min-width: 150px;
-  margin: 20px 20px;
-  border: 1px solid black;
-  }
-  
-  .transformer{
-  max-width: 15px;
-  margin: 10px;
-  }
-  
-  .self{
-  border: none;
-  width: 10%;
-  min-width: 100px;
-  margin: 20px 20px;
-  }
-  
-  .blogpost{
-  border-bottom: 1px solid #005D9B;
-  }
-  
-  .backgroundBlog{
-  border: none;
-  }
-  
-  ul {
-  margin-bottom: 20px;
-  }
-  
-  ul li {
-  list-style-type: disc;
-  margin-left: 30px;
-  }
-  
-  /* Links styles */
-  a {
-  color: #005D9B;
-  text-decoration: none;
-  }
-  
-  a:hover {
-  text-decoration: underline;
-  }
-  
-  .book{
-      width: 100%;
-      text-align: center;
-  }
-  
-  .book a {
-      text-align: center;
-  }
-  
-  /* Footer styles */
-  footer {
-  text-align: center;
-  background-color: #005D9B;
-  color: #fff;
-  padding: 20px;
-  }
-  
-  footer p a {
-  color: white;
-  }
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+font-family: Arial, sans-serif;
+background-color: #f8f8f8;
+color: #333;
+}
+
+.container {
+width: 90%;
+margin: 0 auto;
+}
+
+/* Header styles */
+header {
+text-align: center;
+padding: 40px;
+background-color: #005D9B;
+color: #fff;
+}
+
+header p a{
+color: white;
+}
+
+h1 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+/* Main styles */
+main {
+padding: 2rem 4rem;
+}
+
+section {
+margin-bottom: 40px;
+}
+
+h2 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+p {
+margin-bottom: 20px;
+}
+
+img {
+width: 20%;
+min-width: 150px;
+margin: 20px 20px;
+border: 1px solid black;
+}
+
+.transformer{
+max-width: 15px;
+margin: 10px;
+}
+
+.self{
+border: none;
+width: 10%;
+min-width: 100px;
+margin: 20px 20px;
+}
+
+.blogpost{
+border-bottom: 1px solid #005D9B;
+}
+
+.backgroundBlog{
+border: none;
+}
+
+ul {
+margin-bottom: 20px;
+}
+
+ul li {
+list-style-type: disc;
+margin-left: 30px;
+}
+
+/* Links styles */
+a {
+color: #005D9B;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+.book{
+width: 100%;
+text-align: center;
+}
+
+.book a {
+text-align: center;
+}
+
+.payments{
+display: flex;
+flex-direction: row;
+}
+
+.payment{
+    border-radius: 20px;
+    border: rgb(19, 15, 79) 4px;
+}
+
+/* Footer styles */
+footer {
+text-align: center;
+background-color: #005D9B;
+color: #fff;
+padding: 20px;
+}
+
+footer p a {
+color: white;
+}
