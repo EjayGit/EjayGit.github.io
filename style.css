@@ -115,6 +115,8 @@ flex-direction: row;
 .payment{
     border-radius: 20px;
     border: rgb(19, 15, 79) 4px;
+    max-width: 20%;
+    height: auto;
 }
 
 /* Footer styles */
