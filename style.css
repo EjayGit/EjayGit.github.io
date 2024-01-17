@@ -114,12 +114,13 @@ text-align: center;
 }
 
 .payment{
-    border-radius: 20px;
-    border: rgb(19, 15, 79) 4px;
     max-width: 20%;
     height: auto;
     text-align: center;
     margin: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    border-style: 4px rgb(19, 15, 79) solid;
 }
 
 .priceText{
