@@ -110,6 +110,7 @@ text-align: center;
 .payments{
 display: flex;
 flex-direction: row;
+text-align: center;
 }
 
 .payment{
@@ -117,6 +118,7 @@ flex-direction: row;
     border: rgb(19, 15, 79) 4px;
     max-width: 20%;
     height: auto;
+    text-align: justify;
 }
 
 /* Footer styles */
