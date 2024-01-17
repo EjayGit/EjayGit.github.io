@@ -107,26 +107,6 @@ text-align: center;
 text-align: center;
 }
 
-.payments{
-display: flex;
-flex-direction: row;
-text-align: center;
-}
-
-.payment{
-    max-width: 20%;
-    height: auto;
-    text-align: center;
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 20px;
-    border-style: 4px rgb(19, 15, 79) solid;
-}
-
-.priceText{
-    text-align: justify;
-}
-
 /* Footer styles */
 footer {
 text-align: center;
