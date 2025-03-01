@@ -53,6 +53,10 @@ main{
     border: black;
 }
 
+.exp-title{
+    margin: 2rem;
+}
+
 .exp-content{
     display: flex;
 }
