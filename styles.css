@@ -62,8 +62,19 @@ main{
     display: flex;
 }
 
+.edu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .content-box{
     margin: 2rem;
+}
+
+.content-email{
+    text-align: center;
 }
 
 .content-box h4 {
