@@ -48,7 +48,7 @@ main{
 .skill{
     margin: 2rem;
     padding: 1rem;
-    background-color: whitesmoke;
+    background-color: rgb(245, 198, 111);
     border-radius: 20px;
     border: black;
 }
