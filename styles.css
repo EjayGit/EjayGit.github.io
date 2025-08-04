@@ -104,3 +104,53 @@ main{
         display: none;
     }
   }
+
+.cyber-news-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.cyber-news-container h2 {
+  color: #052962; /* Guardian blue */
+  border-bottom: 2px solid #c70000; /* Guardian red */
+  padding-bottom: 0.5rem;
+}
+
+.news-article {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f6f6f6;
+  border-left: 4px solid #052962;
+}
+
+.news-article h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.news-article h3 a {
+  color: #052962;
+  text-decoration: none;
+}
+
+.news-article h3 a:hover {
+  text-decoration: underline;
+  color: #c70000;
+}
+
+.news-date {
+  color: #767676;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.news-summary {
+  margin: 0.5rem 0 0 0;
+  line-height: 1.4;
+}
+
+.error-message {
+  color: #c70000;
+  font-weight: bold;
+}
