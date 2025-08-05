@@ -60,6 +60,7 @@ main{
 
 .exp-content{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .edu-content{
