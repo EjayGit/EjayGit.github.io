@@ -54,6 +54,27 @@ main{
     border: black;
 }
 
+.link-box{
+    text-align: center;
+}
+
+.link-box a {
+    color: rgb(15, 27, 68);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 0.3rem 0;
+}
+
+.link-box a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.link-box ul{
+    list-style: none;
+}
+
 .exp-title{
     margin: 2rem;
     text-align: center;
@@ -177,7 +198,6 @@ main{
     color: #fff;
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    border-bottom: 2px solid #3498db;
     padding-bottom: 0.5rem;
     display: inline-block;
 }
@@ -208,7 +228,6 @@ main{
     font-size: 0.9rem;
     color: rgba(168, 181, 224, 0.7);
     text-align: center;
-    border-top: 1px solid rgba(168, 181, 224, 0.2);
     padding-top: 1rem;
 }
 
