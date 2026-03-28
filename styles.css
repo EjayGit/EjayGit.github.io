@@ -16,7 +16,9 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     margin: 2rem;
+    align-items: center;
 }
+
 
 .profile{
     max-width: 20rem;
