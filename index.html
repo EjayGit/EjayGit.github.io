@@ -1,293 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Erik Clark">
-<meta name="description" content="Erik">
-<meta name="description" content="Clark">
-<title>Erik J Clark</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Erik Clark – Trainee Cybersecurity Professional showcasing projects, experience, and resources.">
+  <meta name="author" content="Erik Clark">
+  <title>Erik Clark · Cybersecurity Portfolio</title>
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts: modern variable fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* Modern container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ===== HEADER (glassmorphism / gradient) ===== */
+    .modern-header {
+      background: linear-gradient(135deg, #0a0f2a 0%, #020617 100%);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 2rem 0 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modern-header::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, rgba(56,189,248,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .header-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .header-left h4 {
+      color: #94a3f8;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      font-size: 1.1rem;
+    }
+
+    .header-left h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #b9e2ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin: 0.5rem 0 0.25rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .badge-role {
+      background: rgba(56, 189, 248, 0.15);
+      backdrop-filter: blur(4px);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    /* profile image modern */
+    .profile-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.02);
+    }
+
+    .projects-mini {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .projects-mini h4 {
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .project-links a {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #b9e2ff;
+      text-decoration: none;
+      transition: all 0.2s;
+      backdrop-filter: blur(4px);
+    }
+
+    .project-links a:hover {
+      background: #38bdf8;
+      color: #020617;
+      transform: translateY(-2px);
+    }
+
+    .stats-group {
+      display: flex;
+      gap: 2rem;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #f8fafc, #90e0ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* cards and modern sections */
+    .section-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+      margin: 2rem auto;
+      padding: 1.8rem 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-left: 5px solid #38bdf8;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      color: #0f172a;
+    }
+
+    /* news area modern */
+    .news-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .news-item {
+      background: #f1f5f9;
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      transition: all 0.2s;
+      border: 1px solid #e2e8f0;
+    }
+
+    .news-item:hover {
+      background: #ffffff;
+      border-color: #b9e2ff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      transform: translateX(4px);
+    }
+
+    .news-headline {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-summary {
+      color: #334155;
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+      line-height: 1.5;
+    }
+
+    .news-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0284c7;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .news-link:hover {
+      color: #0c4a6e;
+      gap: 0.5rem;
+    }
+
+    /* resource links modern */
+    .resource-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      list-style: none;
+      justify-content: center;
+    }
+
+    .resource-list li a {
+      background: #eef2ff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #1e293b;
+    }
+
+    .resource-list li a:hover {
+      background: #38bdf8;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* experience timeline style */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+
+    .exp-item {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .exp-date {
+      min-width: 100px;
+      font-weight: 600;
+      color: #38bdf8;
+      font-size: 0.85rem;
+    }
+
+    .exp-title {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* awards / interests chips */
+    .chip-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .chip {
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #0f172a;
+      transition: all 0.2s;
+    }
+
+    .chip:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: white;
+    }
+
+    .edu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .edu-list span {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem;
+      border-radius: 0.75rem;
+      transition: background 0.2s;
+    }
+
+    .edu-list span:hover {
+      background: #f8fafc;
+    }
+
+    /* microsoft form embed */
+    .form-embed {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      background: #f1f5f9;
+      margin-top: 0.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+    }
+
+    /* footer modern */
+    .modern-footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-inner {
+      text-align: center;
+    }
+
+    .footer-inner p {
+      margin: 0.3rem 0;
+      font-size: 0.85rem;
+    }
+
+    /* responsive */
+    @media (max-width: 850px) {
+      .header-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+      .stats-group {
+        justify-content: center;
+      }
+      .exp-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-card {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .project-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .stats-group {
+        gap: 1rem;
+        padding: 0.8rem 1.2rem;
+      }
+      .exp-date {
+        min-width: 85px;
+      }
+    }
+
+    .loading-spinner {
+      text-align: center;
+      padding: 2rem;
+      color: #0284c7;
+    }
+
+    .error-message {
+      background: #fee2e2;
+      color: #dc2626;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <div class="header-left">
-            <div class="block-element">
-                <h4>Hey, my name is</h4>
-            </div>
-            <div class="block-element">
-                <h1>Erik Clark</h1>
-            </div>
-            <div class="block-element">
-                <h4>Trainee cybersecurity professional</h4>
-            </div>
-        </div>
-        <div class="header-center">
-            <!-- my profile image -->
-            <img class="profile" src="https://image.freepik.com/free-vector/geek-with-laptop_138200-59.jpg" alt="A picture of a geek holding a laptop">
-            <h4 class="block-element">Recent Projects</h4>
-            <div class="block-element">
-                <h4><a style="color: rgb(168, 181, 224);" href="./Book in progress.pdf">Book in progress</a></h4>
-            </div>
-            <div class="block-element">
-                <h4><a style="color: rgb(168, 181, 224);" href="https://addons.mozilla.org/en-US/firefox/addon/js-keylogger-scanner/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">Firefox Keylogger Scanner</a></h4>
-            </div>
-            <div class="block-element">
-                <h4><a style="color: rgb(168, 181, 224);" href="https://youco2.vercel.app">Personal CO2 Logging Site</a></h4>
-            </div>
-        </div>
-        <div class="header-right">
-            <div class="block-element">
-                <div class="header-title">
-                    <h4>Years of experience</h4>
-                </div>
-                <div class="header-sub">
-                    <h1>2+</h1>
-                </div>
-            </div>
-            <div class="block-element">
-                <div class="header-title">
-                    <h4>Certifications</h4>
-                </div>
-                <div class="header-sub">
-                    <h1>17</h1>
-                </div>
-            </div>
-            <div class="block-element">
-                <div class="header-title">
-                    <h4>Degrees</h4>
-                </div>
-                <div class="header-sub">
-                    <h1>1</h1>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <main>
-        <div class="cyber-news-container">
-            <h2>Latest Cybersecurity News</h2>
-            <div id="news-results">
-                <p>Loading headlines...</p>
-            </div>
-        </div>
+<header class="modern-header">
+  <div class="container header-grid">
+    <!-- Left intro -->
+    <div class="header-left">
+      <h4><i class="fas fa-hand-peace"></i> Hey, my name is</h4>
+      <h1>Erik Clark</h1>
+      <div class="badge-role">
+        <i class="fas fa-shield-alt"></i> Trainee Cybersecurity Professional
+      </div>
+    </div>
 
-        <div class="link-box">
-            <div class="exp-title">
-                <h1>Cybersecurity Resources</h1>
-            </div>
-            <ul>
-                <li><a href="https://www.cisecurity.org" target="_blank" rel="noopener noreferrer">CIS (Center for Internet Security)</a></li>
-                <li><a href="https://www.ncsc.gov.uk/cyberessentials" target="_blank" rel="noopener noreferrer">Cyber Essentials (UK NCSC)</a></li>
-                <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer">NIST Cybersecurity Framework</a></li>
-            </ul>
+    <!-- Center: profile + recent projects (modern) -->
+    <div class="profile-wrapper">
+      <img class="profile-img" src="https://image.freepik.com/free-vector/geek-with-laptop_138200-59.jpg" alt="Erik Clark - cybersecurity enthusiast">
+      <div class="projects-mini">
+        <h4><i class="fas fa-code-branch"></i> RECENT PROJECTS</h4>
+        <div class="project-links">
+          <a href="./Book in progress.pdf" target="_blank"><i class="fas fa-book-open"></i> Book in progress</a>
+          <a href="https://addons.mozilla.org/en-US/firefox/addon/js-keylogger-scanner/" target="_blank" rel="noopener"><i class="fab fa-firefox"></i> Keylogger Scanner</a>
+          <a href="https://youco2.vercel.app" target="_blank" rel="noopener"><i class="fas fa-leaf"></i> CO₂ Logger</a>
         </div>
+      </div>
+    </div>
 
+    <!-- Right: stats cards modern -->
+    <div class="stats-group">
+      <div class="stat-item">
+        <div class="stat-number">2+</div>
+        <div class="stat-label">Years exp</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">17</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Degree</div>
+      </div>
+    </div>
+  </div>
+</header>
 
-        <div class="experience-box">
-            <div class="exp-title">
-                <h1>Experience and Education</h1>
-            </div>
-            <div class="exp-content">
-                <div class="exp-content-left">
-                    <div class="content-box">
-                        <div class="content-left">
-                            <h4 class="content-date">2022 - Present</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Travel and Training</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-box">
-                        <div class="content-left">
-                            <h4 class="content-date">2021 - 2022</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Product Support Engineer - CMR Surgical</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-box">
-                        <div class="content-left">
-                            <h4 class="content-date">2020 - 2021</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>COVID Compliance Officer - Bernard Matthews</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-box">
-                        <div class="content-left">
-                            <h4 class="content-date">2019 - 2019</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Tutor - Brilliant Club</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-box appear-when-small">
-                        <div class="content-left">
-                            <h4 class="content-date">2013 - 2014</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Summer Intern - GE Aviation</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-box appear-when-small">
-                        <div class="content-left">
-                            <h4 class="content-date">2012 - 2022</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Student - University of Liverpool</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-box appear-when-small">
-                        <div class="content-left">
-                            <h4 class="content-date">2007 - 2012</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Pilot - Royal Air Force</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="exp-content-right">
-                    <div class="content-box none-when-small">
-                        <div class="content-left">
-                            <h4 class="content-date">2013 - 2014</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Summer Intern - GE Aviation</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-box none-when-small">
-                        <div class="content-left">
-                            <h4 class="content-date">2012 - 2022</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Student - University of Liverpool</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content-box none-when-small">
-                        <div class="content-left">
-                            <h4 class="content-date">2007 - 2012</h4>
-                        </div>
-                        <div class="content-right">
-                            <div class="content-title">
-                                <h2>Pilot - Royal Air Force</h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="experience-box">
-            <div class="exp-title">
-                <h1>Education and Awards</h1>
-            </div>
-            <div class="edu-content">
-                <div>
-                    <div class="content-title">
-                        <h3>Avionic Systems Engineering - 1st Class BEng (Hons)</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Permanent Royal Commission</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Level 5 Diploma: Leadership and Management</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Defence phase 3 trainer (Train The Trainer)</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Above and Beyond Silver Global Award</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Farnell Electronic Component Company Prize</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Gold CREST Award from British Association of the Engineering Education Scheme in England</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-<br>
-        <div class="experience-box">
-            <div class="exp-title">
-                <h1>Interests</h1>
-            </div>
-            <div class="edu-content">
-                <div>
-                    <div class="content-title">
-                        <h3>Cybersecurity</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>AI</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-title">
-                        <h3>Quantum Computing</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+<main class="container">
+  <!-- Cybersecurity News - modern card -->
+  <div class="section-card">
+    <div class="section-title"><i class="fas fa-newspaper"></i> Latest Cybersecurity News</div>
+    <div id="news-results">
+      <div class="loading-spinner"><i class="fas fa-spinner fa-pulse"></i> Fetching top threats & updates...</div>
+    </div>
+  </div>
 
-        <div class="experience-box">
-            <div class="exp-title">
-                <iframe width="640px" height="480px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAApTYZjNUQVBUN1UzVjAxMU1GWlhMRTJTVVdBQUhZRS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-            </div>
-        </div>
-    </main>
+  <!-- Resources + Experience hybrid -->
+  <div class="section-card">
+    <div class="section-title"><i class="fas fa-link"></i> Trusted Cybersecurity Resources</div>
+    <ul class="resource-list">
+      <li><a href="https://www.cisecurity.org" target="_blank" rel="noopener"><i class="fas fa-building"></i> CIS Center</a></li>
+      <li><a href="https://www.ncsc.gov.uk/cyberessentials" target="_blank" rel="noopener"><i class="fas fa-flag-checkered"></i> Cyber Essentials (UK)</a></li>
+      <li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener"><i class="fas fa-shield-virus"></i> NIST Framework</a></li>
+    </ul>
+  </div>
 
-    <footer class="cyber-footer">
-        <div class="footer-content">
-            
-            <div class="footer-copyright">
-                <p>&copy; <span id="2025"></span> Erik Clark | Trainee Cybersecurity Professional</p>
-                <p>All trademarks and logos are property of their respective owners.</p>
+  <!-- Experience & Education (modern two column timeline) -->
+  <div class="section-card">
+    <div class="section-title"><i class="fas fa-briefcase"></i> Experience & Education</div>
+    <div class="exp-grid">
+      <div>
+        <div class="exp-item"><div class="exp-date">2022 – Present</div><div class="exp-title">Travel and Training · Cybersecurity focus</div></div>
+        <div class="exp-item"><div class="exp-date">2021 – 2022</div><div class="exp-title">Product Support Engineer – CMR Surgical</div></div>
+        <div class="exp-item"><div class="exp-date">2020 – 2021</div><div class="exp-title">COVID Compliance Officer – Bernard Matthews</div></div>
+        <div class="exp-item"><div class="exp-date">2019 – 2019</div><div class="exp-title">Tutor – Brilliant Club</div></div>
+        <div class="exp-item"><div class="exp-date">2013 – 2014</div><div class="exp-title">Summer Intern – GE Aviation</div></div>
+        <div class="exp-item"><div class="exp-date">2012 – 2022</div><div class="exp-title">Student – University of Liverpool</div></div>
+        <div class="exp-item"><div class="exp-date">2007 – 2012</div><div class="exp-title">Pilot – Royal Air Force</div></div>
+      </div>
+      <div>
+        <div class="exp-item"><div class="exp-date">2013 – 2014</div><div class="exp-title">Summer Intern – GE Aviation</div></div>
+        <div class="exp-item"><div class="exp-date">2012 – 2022</div><div class="exp-title">Student – University of Liverpool (BEng)</div></div>
+        <div class="exp-item"><div class="exp-date">2007 – 2012</div><div class="exp-title">Pilot – Royal Air Force</div></div>
+      </div>
+    </div>
+    <div style="font-size: 0.8rem; text-align: center; margin-top: 0.5rem; color: #475569;">
+      <i class="fas fa-graduation-cap"></i> Full timeline — RAF pilot background to cybersecurity engineer
+    </div>
+  </div>
+
+  <!-- Education and Awards -->
+  <div class="section-card">
+    <div class="section-title"><i class="fas fa-medal"></i> Education & Awards</div>
+    <div class="edu-list">
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Avionic Systems Engineering – 1st Class BEng (Hons)</span>
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Permanent Royal Commission</span>
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Level 5 Diploma: Leadership and Management</span>
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Defence phase 3 trainer (Train The Trainer)</span>
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Above and Beyond Silver Global Award</span>
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Farnell Electronic Component Company Prize</span>
+      <span><i class="fas fa-check-circle" style="color:#38bdf8;"></i> Gold CREST Award – Engineering Education Scheme</span>
+    </div>
+  </div>
+
+  <!-- Interests - modern chip design -->
+  <div class="section-card">
+    <div class="section-title"><i class="fas fa-heart"></i> Fields of Interest</div>
+    <div class="chip-container">
+      <span class="chip"><i class="fas fa-lock"></i> Cybersecurity</span>
+      <span class="chip"><i class="fas fa-microchip"></i> AI & ML Security</span>
+      <span class="chip"><i class="fas fa-atom"></i> Quantum Computing</span>
+      <span class="chip"><i class="fas fa-cloud"></i> Cloud Security</span>
+      <span class="chip"><i class="fas fa-robot"></i> Threat Intelligence</span>
+    </div>
+  </div>
+
+  <!-- Contact / Microsoft Form embed modern -->
+  <div class="section-card">
+    <div class="section-title"><i class="fas fa-envelope"></i> Get in touch</div>
+    <div class="form-embed">
+      <iframe src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAApTYZjNUQVBUN1UzVjAxMU1GWlhMRTJTVVdBQUhZRS4u&embed=true" title="Contact Erik Clark" loading="lazy"></iframe>
+    </div>
+  </div>
+</main>
+
+<footer class="modern-footer">
+  <div class="container footer-inner">
+    <p><i class="far fa-copyright"></i> <span id="current-year"></span> Erik Clark – Trainee Cybersecurity Professional</p>
+    <p>All trademarks and logos are property of their respective owners. Built with modern web standards.</p>
+    <p style="margin-top: 0.8rem;"><i class="fas fa-shield-hawk"></i> Secure by mindset | <i class="fas fa-chart-line"></i> Always learning</p>
+  </div>
+</footer>
+
+<script type="module">
+  // === Dynamic Year for Footer ===
+  document.getElementById('current-year').innerText = new Date().getFullYear();
+
+  // === Guardian API integration with your actual API key ===
+  const API_KEY = "e04fde79-21ee-4639-8d52-0609e2f95670";
+  const endpoint = `https://content.guardianapis.com/search?q=cybersecurity&api-key=${API_KEY}&show-fields=headline,trailText,thumbnail&order-by=newest&page-size=5`;
+
+  const NEWS_CONTAINER = document.getElementById("news-results");
+
+  async function fetchTopCyberNews() {
+    try {
+      const response = await fetch(endpoint);
+      if (!response.ok) {
+        throw new Error(`Guardian API error: ${response.status} - ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      const articles = data.response.results;
+
+      if (!articles || articles.length === 0) {
+        throw new Error("No articles found");
+      }
+
+      // Build modern news cards
+      const newsHTML = `
+        <div class="news-grid">
+          ${articles.map(article => `
+            <div class="news-item">
+              <div class="news-headline">
+                <i class="fas fa-shield-alt"></i> ${escapeHtml(article.fields.headline || "Cybersecurity Update")}
+              </div>
+              <div class="news-summary">
+                ${escapeHtml(article.fields.trailText || "Click to read more about this cybersecurity development.")}
+              </div>
+              <a class="news-link" href="${escapeHtml(article.webUrl)}" target="_blank" rel="noopener noreferrer">
+                Read full story <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
+          `).join('')}
         </div>
-    </footer>
+      `;
+
+      NEWS_CONTAINER.innerHTML = newsHTML;
+
+    } catch (error) {
+      console.error("News fetch error:", error);
+      NEWS_CONTAINER.innerHTML = `
+        <div class="error-message">
+          <i class="fas fa-exclamation-triangle"></i> Unable to load live news at this moment.<br>
+          <small>Please check your connection or try again later.</small>
+        </div>
+      `;
+    }
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  // Initialize news fetch
+  fetchTopCyberNews();
+
+  // Add scroll shadow effect to header
+  const header = document.querySelector('.modern-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
+
+  // Smooth hover animations for interactive elements
+  console.log("🚀 Erik Clark's modern portfolio — live with Guardian API");
+</script>
 </body>
-<script type=module src="file.js"></script>
 </html>
