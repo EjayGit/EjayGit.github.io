@@ -1,2 +1,2 @@
 // config.js
-export const API_KEY = "a43ff090-180e-4fb9-beca-b834bdf860c0";
+export const API_KEY = "e04fde79-21ee-4639-8d52-0609e2f95670";
